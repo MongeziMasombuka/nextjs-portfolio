@@ -22,32 +22,24 @@ export const createPost = async (data: {
 
 // READ ALL
 export const getPosts = async () => {
-  const baseUrl = process.env.NEXT_PUBLIC_DOMAIN!;
-  const url = new URL("/posts-meta.json", baseUrl);
-  const res = await fetch(url.href);
-
-  if (!res.ok) throw new Error("Failed to fetch data");
-
-  const posts = await res.json();
-
+  const filePath = path.join(process.cwd(), "public", "posts-meta.json");
+  const fileContents = await fs.readFile(filePath, "utf8");
+  const posts = JSON.parse(fileContents);
   return posts;
 };
 
 // READ ONE
 export const getPostBySlug = async (slug: string) => {
-  const baseUrl = process.env.NEXT_PUBLIC_DOMAIN!;
-  const url = new URL("/posts-meta.json", baseUrl);
-
-  const res = await fetch(url.href);
-
-  if (!res.ok) throw new Error(`Failed to fetch post index: ${res.statusText}`);
-
-  const index: PostMeta[] = await res.json();
+  // Read posts-meta.json directly from file system
+  const indexPath = path.join(process.cwd(), "public", "posts-meta.json");
+  const indexContent = await fs.readFile(indexPath, "utf8");
+  const index: PostMeta[] = JSON.parse(indexContent);
 
   const postMeta = index.find((post) => post.slug === slug);
 
   if (!postMeta) throw new Error(`Post with slug "${slug}" not found`);
 
+  // Read markdown file for the post
   const filePath = path.join(process.cwd(), "posts", `${slug}.md`);
   const markdown = await fs.readFile(filePath, "utf8");
 
