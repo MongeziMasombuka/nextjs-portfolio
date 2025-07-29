@@ -71,6 +71,18 @@ const ProjectAddForm = () => {
         />
       </div>
       <div className="mb-4">
+        <label className="block text-black dark:text-gray-300 font-bold mb-2">
+          Github
+        </label>
+        <input
+          type="text"
+          id="github"
+          name="github"
+          className="border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 text-black dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 w-full py-2 px-3 mb-2"
+          placeholder="https://github.com/janedoe/portfolio-site"
+        />
+      </div>
+      <div className="mb-4">
         <label
           htmlFor="description"
           className="block text-black dark:text-gray-300 font-bold mb-2"

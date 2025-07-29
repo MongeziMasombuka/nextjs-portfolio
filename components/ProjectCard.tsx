@@ -27,16 +27,26 @@ const ProjectCard = ({ project }: { project: Project }) => {
           <p className="text-sm text-black dark:text-gray-300 mb-2">
             {project.description}
           </p>
-          <div className="flex justify-between items-center text-sm text-blue-400 dark:text-gray-400">
-            <span>{project.category}</span>
+          <span>{project.category}</span>
+          <div className="flex justify-between items-center text-sm text-blue-400 dark:text-gray-400 mt-2">
             <a
-              href={project.url}
+              href={project.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block text-gray-400 hover:text-blue-400 px-6 py-2 transition"
+              className="inline-block text-gray-400 hover:text-blue-400 transition"
             >
-              View Live Site →
+              View GitHub Repo →
             </a>
+            {project.url && (
+              <a
+                href={project.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block text-gray-400 hover:text-blue-400 transition"
+              >
+                View Live Site →
+              </a>
+            )}
           </div>
         </div>
       </div>

@@ -41,6 +41,7 @@ export const addProject = async (formData: FormData) => {
     category: getString("type"),
     title: getString("title"),
     url: getString("url"),
+    github: getString("github"),
     description: getString("description"),
     programmingLanguages: getStrings("programming_languages"),
     frameworksAndLibraries: getStrings("frameworks_and_libraries"),
@@ -68,6 +69,8 @@ export const getAllProjects = async () => {
     databaseTechnologies: p.databaseTechnologies,
     image: p.image,
     url: p.url,
+    github: p.github,
+
     featured: p.featured,
   }));
 
@@ -90,6 +93,7 @@ export const getFeaturedProjects = async () => {
     databaseTechnologies: p.databaseTechnologies,
     image: p.image,
     url: p.url,
+    github: p.github,
     featured: p.featured,
   }));
 
@@ -117,6 +121,7 @@ export const getProjectById = async (id: string) => {
     category: rawProject.category,
     title: rawProject.title,
     url: rawProject.url,
+    github: rawProject.github,
     description: rawProject.description,
     programmingLanguages: rawProject.programmingLanguages,
     frameworksAndLibraries: rawProject.frameworksAndLibraries,

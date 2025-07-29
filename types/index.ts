@@ -5,7 +5,8 @@ export type ProjectDB = {
   owner: mongoose.Types.ObjectId;
   category: string;
   title: string;
-  url: string;
+  url?: string;
+  github: string;
   description: string;
   programmingLanguages: string[];
   frameworksAndLibraries: string[];
@@ -18,7 +19,8 @@ export type ProjectDBFetch = {
   owner: mongoose.Types.ObjectId;
   category: string;
   title: string;
-  url: string;
+  url?: string;
+  github: string;
   description: string;
   programmingLanguages: string[];
   frameworksAndLibraries: string[];
@@ -32,7 +34,8 @@ export type Project = {
   owner: string;
   category: string;
   title: string;
-  url: string;
+  url?: string;
+  github: string;
   description: string;
   programmingLanguages: string[];
   frameworksAndLibraries: string[];

@@ -29,7 +29,8 @@ const ProjectSchema: Schema = new Schema({
     type: String, // single image name or path
     required: true,
   },
-  url: { type: String, required: true },
+  url: { type: String },
+  github: { type: String, required: true },
   featured: { type: Boolean, required: true, default: false },
 });
 

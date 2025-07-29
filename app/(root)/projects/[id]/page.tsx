@@ -15,12 +15,12 @@ const ProjectDetailsPage = async (props: {
     <>
       <Link
         href="/projects"
-        className="flex items-center text-blue-400 hover:text-blue-500 mb-6 transition"
+        className="flex items-center text-blue-400 hover:text-blue-500 transition"
       >
         <FaArrowLeft className="mr-2" /> Back To Projects
       </Link>
 
-      <div className="grid gap-8 md:grid-cols-2 items-start">
+      <div className="grid gap-8 md:grid-cols-2 items-start py-6">
         <div>
           <Image
             src={project.image}
@@ -37,17 +37,29 @@ const ProjectDetailsPage = async (props: {
             {project.title}
           </h1>
           <p className="text-black dark:text-gray-300 text-sm mb-4">
-            {/* {new Date(project.date).toLocaleDateString()}*/}
-            <a
-              href={project.url}
-              target="_blank"
-              className="inline-block text-white bg-blue-600 hover:bg-blue-700 px-6 py-2 mr-2 rounded transition"
-            >
-              View Live Site →
-            </a>
-            •{"  "}
             {project.category}
+            {/*
+            •{"  "} {new Date(project.date).toLocaleDateString()}*/}
           </p>
+
+          <div className="flex gap-4 text-black dark:text-gray-300 text-sm mb-4">
+            <a
+              href={project.github}
+              target="_blank"
+              className="inline-block text-white bg-blue-600 hover:bg-blue-700 px-4 py-2 mr-2 rounded transition"
+            >
+              View GitHub Repo
+            </a>
+            {project.url && (
+              <a
+                href={project.url}
+                target="_blank"
+                className="inline-block text-white bg-blue-600 hover:bg-blue-700 px-4 py-2 mr-2 rounded transition"
+              >
+                View Live Site
+              </a>
+            )}
+          </div>
           <p className="text-black dark:text-gray-200 mb-6">
             {project.description}
           </p>
