@@ -139,7 +139,7 @@ const AboutPage = () => {
           Email
         </h3>
         <a
-          href="momasombuka@gmail.com"
+          href="mailto:momasombuka@gmail.com"
           target="_blank"
           rel="noopener noreferrer"
           className="text-black dark:text-gray-300 leading-relaxed"
