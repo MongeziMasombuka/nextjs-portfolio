@@ -173,14 +173,14 @@ const AboutPage = () => {
       <div className="flex gap">
         <div className="flex gap-4">
           <a
-            href="/cv.pdf"
+            href="/CV.pdf"
             download
             className="inline-block text-white bg-blue-600 hover:bg-blue-700 px-6 py-2 rounded transition"
           >
             Download CV
           </a>
           <a
-            href="/cv.pdf"
+            href="/CV.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block text-blue-600 border border-blue-600 hover:bg-blue-50 px-6 py-2 rounded transition"
