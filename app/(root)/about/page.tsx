@@ -16,11 +16,12 @@ const AboutPage = () => {
             About Me
           </h1>
           <p className="text-black dark:text-gray-300 text-lg">
-            Hi there, Im Mongezi. I&apos;m a final-year Computer Science student
-            studying at Tshwane University of Technology with a strong passion
-            for software development and problem-solving. I enjoy building
-            clean, scalable, user-focused web applications and constantly
-            exploring new technologies to grow as a full-stack developer.
+            Hi there, I&apos;m Mongezi. I&apos;m a final-year Computer Science
+            student studying at Tshwane University of Technology with a strong
+            passion for software development and problem-solving. I enjoy
+            building clean, scalable, user-focused web applications and
+            constantly exploring new technologies to grow as a full-stack
+            developer.
           </p>
           <br />
           <p className="text-black dark:text-gray-300 text-lg">
