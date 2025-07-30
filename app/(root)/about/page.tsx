@@ -1,3 +1,5 @@
+import ExternalLinkButton from "@/components/ExternalLinkButton";
+
 const AboutPage = () => {
   return (
     <div className="max-w-5xl mx-auto px-6 py-16 shadow-md rounded-md bg-white  dark:bg-gray-900">
@@ -161,7 +163,7 @@ const AboutPage = () => {
           LinkedIn
         </h3>
         <a
-          href="https://www.linkedin.com/in/mongezi-masombuka/ "
+          href="https://www.linkedin.com/in/mongezi-masombuka/"
           target="_blank"
           rel="noopener noreferrer"
           className="text-black dark:text-gray-300 leading-relaxed"
@@ -172,21 +174,12 @@ const AboutPage = () => {
 
       <div className="flex gap">
         <div className="flex gap-4">
-          <a
-            href="/CV.pdf"
-            download
-            className="inline-block text-white bg-blue-600 hover:bg-blue-700 px-6 py-2 rounded transition"
-          >
+          <ExternalLinkButton href="/CV.pdf" variant="primary">
             Download CV
-          </a>
-          <a
-            href="/CV.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block text-blue-600 border border-blue-600 hover:bg-blue-50 px-6 py-2 rounded transition"
-          >
+          </ExternalLinkButton>
+          <ExternalLinkButton href="/CV.pdf" variant="outline">
             View CV
-          </a>
+          </ExternalLinkButton>
         </div>
       </div>
     </div>

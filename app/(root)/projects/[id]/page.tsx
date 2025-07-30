@@ -1,4 +1,5 @@
 import { getProjectById } from "@/app/actions/project.actions";
+import ExternalLinkButton from "@/components/ExternalLinkButton";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -38,26 +39,17 @@ const ProjectDetailsPage = async (props: {
           </h1>
           <p className="text-black dark:text-gray-300 text-sm mb-4">
             {project.category}
-            {/*
-            •{"  "} {new Date(project.date).toLocaleDateString()}*/}
           </p>
 
           <div className="flex gap-4 text-black dark:text-gray-300 text-sm mb-4">
-            <a
-              href={project.github}
-              target="_blank"
-              className="inline-block text-white bg-blue-600 hover:bg-blue-700 px-4 py-2 mr-2 rounded transition"
-            >
+            <ExternalLinkButton href={project.github} variant="primary">
               View GitHub Repo
-            </a>
+            </ExternalLinkButton>
+
             {project.url && (
-              <a
-                href={project.url}
-                target="_blank"
-                className="inline-block text-white bg-blue-600 hover:bg-blue-700 px-4 py-2 mr-2 rounded transition"
-              >
+              <ExternalLinkButton href={project.url} variant="primary">
                 View Live Site
-              </a>
+              </ExternalLinkButton>
             )}
           </div>
           <p className="text-black dark:text-gray-200 mb-6">

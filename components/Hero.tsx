@@ -15,13 +15,13 @@ const Hero = () => {
       <div className="flex justify-center gap-4">
         <Link
           href="/projects"
-          className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition"
+          className="px-6 py-2 rounded transition hover:bg-blue-700 bg-blue-600 text-white"
         >
           View Projects
         </Link>
         <Link
           href="/contact"
-          className="border border-blue-500 text-blue-600 px-6 py-2 rounded hover:bg-blue-700 hover:text-white transition"
+          className="px-6 py-2 rounded transition hover:bg-blue-700 border border-blue-500 text-blue-600 hover:text-white"
         >
           Contact Me
         </Link>
