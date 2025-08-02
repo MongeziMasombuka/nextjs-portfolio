@@ -55,9 +55,11 @@ const ProjectDetailsPage = async (props: {
           <p className="text-black dark:text-gray-200 mb-6">
             {project.description}
           </p>
-          <h3 className="text-xl font-semibold text-blue-500 dark:text-white my-2">
-            Programming Languages
-          </h3>
+          {project.programmingLanguages.length > 0 && (
+            <h3 className="text-xl font-semibold text-blue-500 dark:text-white my-2">
+              Programming Languages
+            </h3>
+          )}
           <ul className="flex flex-wrap gap-4 text-sm text-white dark:text-gray-300">
             {project.programmingLanguages.map((language) => (
               <li
@@ -68,9 +70,11 @@ const ProjectDetailsPage = async (props: {
               </li>
             ))}
           </ul>
-          <h3 className="text-xl font-semibold text-blue-500 dark:text-white my-2">
-            Frameworks and Libraries
-          </h3>
+          {project.frameworksAndLibraries.length > 0 && (
+            <h3 className="text-xl font-semibold text-blue-500 dark:text-white my-2">
+              Frameworks and Libraries
+            </h3>
+          )}
           <ul className="flex flex-wrap gap-4 text-sm text-white dark:text-gray-300">
             {project.frameworksAndLibraries.map((framework) => (
               <li
@@ -81,9 +85,11 @@ const ProjectDetailsPage = async (props: {
               </li>
             ))}
           </ul>
-          <h3 className="text-xl font-semibold text-blue-500 dark:text-white my-2">
-            Database Technologies
-          </h3>
+          {project.databaseTechnologies.length > 0 && (
+            <h3 className="text-xl font-semibold text-blue-500 dark:text-white my-2">
+              Database Technologies
+            </h3>
+          )}
           <ul className="flex flex-wrap gap-4 text-sm text-white dark:text-gray-300">
             {project.databaseTechnologies.map((database) => (
               <li

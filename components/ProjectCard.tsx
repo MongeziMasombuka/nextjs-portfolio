@@ -8,7 +8,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
   const router = useRouter();
   return (
     <div
-      className="block transform transition duration-300 hover:scale-[1.02]"
+      className="block transform transition duration-300 hover:scale-[1.02] cursor-pointer"
       onClick={() => router.push(`/projects/${project.id}`)}
     >
       <div className="bg-white dark:bg-gray-800 border border-gray-300  dark:border-gray-700 rounded-lg overflow-hidden shadow-md transition hover:shadow-md">
